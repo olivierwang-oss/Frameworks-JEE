@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Site de maintenance - Support technique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0066cc;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        td {
+            padding: 10px 5px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #0066cc;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0052a3;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Support technique</h1>
+
+    <form action="supportTechSupp" method="post">
+        <div class="form-section">
+            <table>
+                <tr>
+                    <td style="width: 15%;">
+                        <label>Prénom: <span class="required">*</span></label>
+                    </td>
+                    <td style="width: 35%;">
+                        <input type="text" name="prenom" required>
+                    </td>
+                    <td style="width: 15%;">
+                        <label>Nom: <span class="required">*</span></label>
+                    </td>
+                    <td style="width: 35%;">
+                        <input type="text" name="nom" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Email: <span class="required">*</span></label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" required>
+                    </td>
+                    <td>
+                        <label>Téléphone:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="telephone" placeholder="01-38-78-60-55">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Logiciel: <span class="required">*</span></label>
+                    </td>
+                    <td>
+                        <select name="logiciel" required>
+                            <option value="">-- Sélectionner --</option>
+                            <option value="Microsoft Excel">Microsoft Excel</option>
+                            <option value="Microsoft Word">Microsoft Word</option>
+                            <option value="Microsoft PowerPoint">Microsoft PowerPoint</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label>Système d'exploitation: <span class="required">*</span></label>
+                    </td>
+                    <td>
+                        <select name="systeme" required>
+                            <option value="">-- Sélectionner --</option>
+                            <option value="Linux">Linux</option>
+                            <option value="Windows">Windows</option>
+                            <option value="Mac OS">Mac OS</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="form-section">
+            <label>Description du problème: <span class="required">*</span></label><br/>
+            <textarea name="description" rows="6" required placeholder="L'imprimante dans la salle info 1 ne fonctionne pas !!!!!!"></textarea>
+        </div>
+
+        <div style="text-align: center;">
+            <input type="submit" value="Soumettre la requête">
+        </div>
+    </form>
+
+    <p style="margin-top: 20px; color: #777; font-size: 12px;">
+        <span class="required">*</span> Champs obligatoires
+    </p>
+</div>
+</body>
+</html>
